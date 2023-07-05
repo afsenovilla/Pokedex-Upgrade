@@ -1,58 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokédex (Beta)</title>
-    <link rel="stylesheet" href="./css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokédex by PokéApi</title>
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/style.css" />
     <script src="./js/main.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <nav class="nav">
-            <img width="300" src="./img/pokedex.png" alt="Pokédex Logo">
-            <ul class="nav-list">
-                <li class="nav-item"> <button class="btn btn-header tipos" id="ver-todos">Todos los tipos</button></li>
-                <li class="nav-item"> <button class="btn btn-header tipos normal" id="normal">Normal</button></li>
-                <li class="nav-item"> <button class="btn btn-header tipos fire" id="fire">Fuego</button></li>
-                <li class="nav-item"> <button class="btn btn-header tipos water" id="water">Agua</button></li>
-                <li class="nav-item"> <button class="btn btn-header tipos grass" id="grass">Planta</button></li>
-                <li class="nav-item"> <button class="btn btn-header tipos electric" id="electric">Eléctrico</button></li>
-                <li class="nav-item"> <button class="btn btn-header tipos ice" id="ice">Hielo</button></li>
-                <li class="nav-item"> <button class="btn btn-header tipos fighting" id="fighting">Lucha</button></li>
-                <li class="nav-item"> <button class="btn btn-header tipos poison" id="poison">Veneno</button></li>
-                <li class="nav-item"> <button class="btn btn-header tipos ground" id="ground">Tierra</button></li>
-                <li class="nav-item"> <button class="btn btn-header tipos flying" id="flying">Volador</button></li>
-                <li class="nav-item"> <button class="btn btn-header tipos psychic" id="psychic">Psíquico</button></li>
-                <li class="nav-item"> <button class="btn btn-header tipos bug" id="bug">Bicho</button></li>
-                <li class="nav-item"> <button class="btn btn-header tipos rock" id="rock">Roca</button></li>
-                <li class="nav-item"> <button class="btn btn-header tipos ghost" id="ghost">Fantasma</button></li>
-                <li class="nav-item"> <button class="btn btn-header tipos dark" id="dark">Siniestro</button></li>
-                <li class="nav-item"> <button class="btn btn-header tipos dragon" id="dragon">Dragón</button></li>
-                <li class="nav-item"> <button class="btn btn-header tipos steel" id="steel">Acero</button></li>
-                <li class="nav-item"> <button class="btn btn-header tipos fairy" id="fairy">Hada</button></li>
-            </ul>
-			<ul class="nav-list">
-                <li class="nav-item"> <button class="btn btn-header region " id="ver-todos">Todas las regiones</button></li>
-                <li class="nav-item"> <button class="btn btn-header region kanto" id="Kanto">Kanto</button></li>
-                <li class="nav-item"> <button class="btn btn-header region johto" id="Johto">Johto</button></li>
-                <li class="nav-item"> <button class="btn btn-header region hoenn" id="Hoenn">Hoenn</button></li>
-                <li class="nav-item"> <button class="btn btn-header region sinnoh" id="Sinnoh">Sinnoh</button></li>
-                <li class="nav-item"> <button class="btn btn-header region teselia" id="Teselia">Teselia</button></li>
-                <li class="nav-item"> <button class="btn btn-header region kalos" id="Kalos">Kalos</button></li>
-                <li class="nav-item"> <button class="btn btn-header region alola" id="Alola">Alola</button></li>
-                <li class="nav-item"> <button class="btn btn-header region galar" id="Galar">Galar</button></li>
-                <li class="nav-item"> <button class="btn btn-header region hisui" id="Hisui">Hisui</button></li>
-                <li class="nav-item"> <button class="btn btn-header region paldea" id="Paldea">Paldea</button></li>
-            </ul>
-        </nav>
+      <nav class="nav">
+        <img width="300" src="./img/pokedex.png" alt="Pokédex Logo" />
+        <ul class="nav-list">
+          <li class="nav-item">
+            <button class="btn btn-header tipos" id="ver-todos">
+              Todos los tipos
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-header tipos normal" id="normal">
+              Normal
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-header tipos fire" id="fire">Fuego</button>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-header tipos water" id="water">Agua</button>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-header tipos grass" id="grass">
+              Planta
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-header tipos electric" id="electric">
+              Eléctrico
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-header tipos ice" id="ice">Hielo</button>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-header tipos fighting" id="fighting">
+              Lucha
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-header tipos poison" id="poison">
+              Veneno
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-header tipos ground" id="ground">
+              Tierra
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-header tipos flying" id="flying">
+              Volador
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-header tipos psychic" id="psychic">
+              Psíquico
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-header tipos bug" id="bug">Bicho</button>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-header tipos rock" id="rock">Roca</button>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-header tipos ghost" id="ghost">
+              Fantasma
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-header tipos dark" id="dark">
+              Siniestro
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-header tipos dragon" id="dragon">
+              Dragón
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-header tipos steel" id="steel">Acero</button>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-header tipos fairy" id="fairy">Hada</button>
+          </li>
+        </ul>
+        <ul class="nav-list">
+          <li class="nav-item">
+            <button class="btn btn-header region" id="ver-todos">
+              Todas las regiones
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-header region kanto" id="Kanto">
+              Kanto
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-header region johto" id="Johto">
+              Johto
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-header region hoenn" id="Hoenn">
+              Hoenn
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-header region sinnoh" id="Sinnoh">
+              Sinnoh
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-header region teselia" id="Teselia">
+              Teselia
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-header region kalos" id="Kalos">
+              Kalos
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-header region alola" id="Alola">
+              Alola
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-header region galar" id="Galar">
+              Galar
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-header region hisui" id="Hisui">
+              Hisui
+            </button>
+          </li>
+          <li class="nav-item">
+            <button class="btn btn-header region paldea" id="Paldea">
+              Paldea
+            </button>
+          </li>
+        </ul>
+      </nav>
     </header>
     <main>
-        <div id="todos">
-            <div class="pokemon-todos" id="listaPokemon">
-            </div>
-        </div>
+      <div id="todos">
+        <div class="pokemon-todos" id="listaPokemon"></div>
+      </div>
     </main>
-</body>
+  </body>
 </html>
